@@ -40,12 +40,16 @@ namespace TournamentGrid
                     RowDefinition rowDefinition = new RowDefinition();
                     subGrid.RowDefinitions.Add(rowDefinition);
 
-                    TextBlock textBlock = new TextBlock();
-                    textBlock.Style = (Style)FindResource("ParticipantTextBlock");
-                    textBlock.Text = $"{i} - {j}";
-                    Grid.SetColumn(textBlock, 0);
-                    Grid.SetRow(textBlock, j);
-                    subGrid.Children.Add(textBlock);
+                    TournamentCell cell = new TournamentCell();
+                    TournamentCellViewModel viewModel = new TournamentCellViewModel()
+                    {
+                        TextBlockText = "Участник",
+                        IsChecked = false,
+                    };
+                    cell.DataContext = viewModel;
+                    Grid.SetColumn(cell, 0);
+                    Grid.SetRow(cell, j);
+                    subGrid.Children.Add(cell);
                 }
                 Grid.SetColumn(subGrid, i);
                 TournamentGrid.Children.Add(subGrid);

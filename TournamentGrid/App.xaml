@@ -4,17 +4,5 @@
              xmlns:local="clr-namespace:TournamentGrid"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
-        <ResourceDictionary>
-
-            <ResourceDictionary.MergedDictionaries>
-
-                <ResourceDictionary Source="TextBlock.xaml" />
-
-
-            </ResourceDictionary.MergedDictionaries>
-
-        </ResourceDictionary>
-        
     </Application.Resources>
 </Application>
